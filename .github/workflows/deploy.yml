@@ -22,7 +22,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd dist
+          cd src/.vuepress/dist
           # echo www.assemblyscript.org > CNAME
           git init -b pages
           git config user.name "GitHub Actions"
