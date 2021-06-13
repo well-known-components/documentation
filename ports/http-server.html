@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>http-server | Well Known Components</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="A different way to create boring applications">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/documentation/assets/css/0.styles.fdb13168.css" as="style"><link rel="preload" href="/documentation/assets/js/app.a37e55eb.js" as="script"><link rel="preload" href="/documentation/assets/js/2.91af1bd7.js" as="script"><link rel="preload" href="/documentation/assets/js/15.75a0678f.js" as="script"><link rel="prefetch" href="/documentation/assets/js/10.730e9d0f.js"><link rel="prefetch" href="/documentation/assets/js/11.552735b1.js"><link rel="prefetch" href="/documentation/assets/js/12.87a4d3cb.js"><link rel="prefetch" href="/documentation/assets/js/13.b4885c12.js"><link rel="prefetch" href="/documentation/assets/js/14.81cf27f4.js"><link rel="prefetch" href="/documentation/assets/js/16.a317ebf2.js"><link rel="prefetch" href="/documentation/assets/js/3.57036479.js"><link rel="prefetch" href="/documentation/assets/js/4.95ec17ab.js"><link rel="prefetch" href="/documentation/assets/js/5.7ec961d8.js"><link rel="prefetch" href="/documentation/assets/js/6.17d5dd20.js"><link rel="prefetch" href="/documentation/assets/js/7.33a5751e.js"><link rel="prefetch" href="/documentation/assets/js/8.aec57476.js"><link rel="prefetch" href="/documentation/assets/js/9.f522ea37.js">
+    <link rel="stylesheet" href="/documentation/assets/css/0.styles.fdb13168.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documentation/" class="home-link router-link-active"><!----> <span class="site-name">Well Known Components</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documentation/docs/" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/documentation/config/" class="nav-link">
+  Config
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documentation/docs/" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/documentation/config/" class="nav-link">
+  Config
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/documentation/docs/" class="sidebar-heading clickable"><span>Documentation</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/documentation/docs/" class="sidebar-link">Introduction</a></li><li><a href="/documentation/docs/philosophy.html" class="sidebar-link">Philosophy</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/documentation/ports/" class="sidebar-heading clickable router-link-active open"><span>Libraries (Ports)</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/documentation/ports/" aria-current="page" class="sidebar-link">@well-known-components</a></li><li><a href="/documentation/ports/lifecycle.html" class="sidebar-link">Lifecycle</a></li><li><a href="/documentation/ports/http-server.html" aria-current="page" class="active sidebar-link">http-server</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documentation/ports/http-server.html#ihttpservercomponent-interface" class="sidebar-link">IHttpServerComponent interface</a></li><li class="sidebar-sub-header"><a href="/documentation/ports/http-server.html#hello-world" class="sidebar-link">Hello world</a></li><li class="sidebar-sub-header"><a href="/documentation/ports/http-server.html#middlewares" class="sidebar-link">Middlewares</a></li><li class="sidebar-sub-header"><a href="/documentation/ports/http-server.html#routes" class="sidebar-link">Routes</a></li><li class="sidebar-sub-header"><a href="/documentation/ports/http-server.html#request-object" class="sidebar-link">Request object</a></li><li class="sidebar-sub-header"><a href="/documentation/ports/http-server.html#responses" class="sidebar-link">Responses</a></li><li class="sidebar-sub-header"><a href="/documentation/ports/http-server.html#handling-formdata" class="sidebar-link">Handling FormData</a></li><li class="sidebar-sub-header"><a href="/documentation/ports/http-server.html#cookies" class="sidebar-link">Cookies</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="http-server"><a href="#http-server" class="header-anchor">#</a> http-server</h1> <p>Repository: <a href="https://github.com/well-known-components/http-server" target="_blank" rel="noopener noreferrer">https://github.com/well-known-components/http-server<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>The port library <code>@well-known-components/http-server</code> implements the interface <a href="https://github.com/well-known-components/interfaces/blob/master/src/components/http-server.ts" target="_blank" rel="noopener noreferrer">IHttpServerComponent<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>.</p> <p>This implementation is based in Koa sources, it provides a small code footprint to create HTTP servers with a powerful async/await programming model.</p> <p>As it is defined in the component, the port only exposes a function <code>use(handler)</code> and <code>setContext(context)</code></p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">IHttpServerComponent<span class="token operator">&lt;</span>Context <span class="token keyword">extends</span> object<span class="token operator">&gt;</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/**
+   * Register a global handler
+   */</span>
+  <span class="token function-variable function">use</span><span class="token operator">:</span> <span class="token punctuation">(</span>handler<span class="token operator">:</span> IHttpServerComponent<span class="token punctuation">.</span>IRequestHandler<span class="token operator">&lt;</span>Context<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span>
+
+  <span class="token comment">/**
+   * Sets a context to be passed on to the handlers.
+   */</span>
+  <span class="token function">setContext</span><span class="token punctuation">(</span>ctx<span class="token operator">:</span> Context<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="creating-the-component"><a href="#creating-the-component" class="header-anchor">#</a> Creating the component</h3> <p>The function <code>createServerComponent</code> creates an HTTP http server for your application. It requires a <code>logs</code> and a <code>config</code> components to startup.</p> <p>Check out the <a href="https://github.com/well-known-components/template-server/blob/8489802c0b1e1d87965ffc6f9843b644d34f69d4/src/components.ts" target="_blank" rel="noopener noreferrer">example code in the template-server<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="ihttpservercomponent-interface"><a href="#ihttpservercomponent-interface" class="header-anchor">#</a> IHttpServerComponent interface</h2> <p>One of the main points of using components and ports is that we can document the behavior of the component (<code>IHttpServerComponent</code>) instead of the port in particular. Enabling multiple implementations of the port maintaining the business logic untouched. Examples of different ports could be:</p> <ul><li>This port to handle node.js http(s) servers</li> <li>A port to implement HTTP2/3 servers</li> <li>A port to handle AWS Lambda requests</li></ul> <h2 id="hello-world"><a href="#hello-world" class="header-anchor">#</a> Hello world</h2> <p>This is a complete example of a server, although in a single file and not following the file conventions. It has everything to start a server and experiment with it.</p> <p>Next examples will only contain handler code for clarity.</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> IConfigComponent<span class="token punctuation">,</span> IHttpServerComponent<span class="token punctuation">,</span> ILoggerComponent<span class="token punctuation">,</span> Lifecycle <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@well-known-components/interfaces&quot;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createConfigComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@well-known-components/env-config-provider&quot;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createServerComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@well-known-components/http-server&quot;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createLogComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@well-known-components/logger&quot;</span>
+
+<span class="token comment">// Record of components</span>
+<span class="token keyword">type</span> <span class="token class-name">Components</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  config<span class="token operator">:</span> IConfigComponent
+  logs<span class="token operator">:</span> ILoggerComponent
+  server<span class="token operator">:</span> IHttpServerComponent<span class="token operator">&lt;</span>AppContext<span class="token operator">&gt;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Context passed to all handlers, we always include the components</span>
+<span class="token comment">// here</span>
+<span class="token keyword">type</span> <span class="token class-name">AppContext</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> Components
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Lifecycle.run manages the lifecycle of the application and components</span>
+<span class="token comment">// it is particularly useful for servers with many components with state</span>
+<span class="token comment">// like database connectors, servers, or batch jobs.</span>
+<span class="token comment">// It also handles POSIX signals like SIGTERM to gracefully stop the</span>
+<span class="token comment">// components</span>
+Lifecycle<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">run</span><span class="token generic class-name"><span class="token operator">&lt;</span>Components<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">{</span> initComponents<span class="token punctuation">,</span> main <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// main entry point of the application, it's role is to wire components</span>
+<span class="token comment">// together (controllers, handlers) and ultimately start the components</span>
+<span class="token comment">// by calling startComponents</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">{</span> components<span class="token punctuation">,</span> startComponents <span class="token punctuation">}</span><span class="token operator">:</span> Lifecycle<span class="token punctuation">.</span>EntryPointParameters<span class="token operator">&lt;</span>Components<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> globalContext<span class="token operator">:</span> AppContext <span class="token operator">=</span> <span class="token punctuation">{</span> components <span class="token punctuation">}</span>
+
+  <span class="token comment">// wire the server</span>
+  components<span class="token punctuation">.</span>server<span class="token punctuation">.</span><span class="token function">setContext</span><span class="token punctuation">(</span>globalContext<span class="token punctuation">)</span>
+
+  components<span class="token punctuation">.</span>server<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">logger</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Log the response time of all the requests handled by this server</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>url<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>url<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> response
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  components<span class="token punctuation">.</span>server<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">handler</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Respond hello world</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      status<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+      body<span class="token operator">:</span> <span class="token punctuation">{</span>
+        json<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        text<span class="token operator">:</span> <span class="token string">&quot;Hello world&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// start server and other components</span>
+  <span class="token keyword">await</span> <span class="token function">startComponents</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// initComponents role is to create BUT NOT START the components,</span>
+<span class="token comment">// this function is only called once by the Lifecycle manager</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">initComponents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>Components<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> logs <span class="token operator">=</span> <span class="token function">createLogComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token function">createConfigComponent</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token constant">HTTP_SERVER_PORT</span><span class="token operator">:</span> <span class="token string">&quot;5000&quot;</span><span class="token punctuation">,</span>
+    <span class="token constant">HTTP_SERVER_HOST</span><span class="token operator">:</span> <span class="token string">&quot;0.0.0.0&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">const</span> server <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token generic-function"><span class="token function">createServerComponent</span><span class="token generic class-name"><span class="token operator">&lt;</span>AppContext<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">{</span> logs<span class="token punctuation">,</span> config <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token comment">/*components*/</span> <span class="token punctuation">{</span>
+    logs<span class="token punctuation">,</span>
+    config<span class="token punctuation">,</span>
+    server<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="middlewares"><a href="#middlewares" class="header-anchor">#</a> Middlewares</h2> <p>Middlewares are called in the same order as they were passed to the server, and the next middleware is awaiteable. That makes possible and easy many configurations like pre-order calling, in-order and post-order.</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// function main()</span>
+
+<span class="token comment">// Log the response time of all the requests handled by this server</span>
+components<span class="token punctuation">.</span>server<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">timeLogger</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// start measuring time</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">time</span><span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>url<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// get the actual response, calling the next middleware</span>
+  <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// measure total time and print to console</span>
+  <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">timeEnd</span><span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>url<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// return response from the middleware</span>
+  <span class="token keyword">return</span> response
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+components<span class="token punctuation">.</span>server<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">handler</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> _nextMiddleware<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// although _nextMiddleware may exist, this handler simply returns</span>
+  <span class="token comment">// a response, therefore, the _nextMiddleware will never be called</span>
+  <span class="token comment">// and could be ommited from the signature</span>
+
+  <span class="token comment">// Respond hello world</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    status<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+    body<span class="token operator">:</span> <span class="token punctuation">{</span>
+      json<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      text<span class="token operator">:</span> <span class="token string">&quot;Hello world&quot;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="routes"><a href="#routes" class="header-anchor">#</a> Routes</h2> <p>Since the http-server is overly-simplistic in its implementation, routes should be handled by the user, but the library also includes a <code>Router</code> class that can be used to create the handler middleware.</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// to keep things testable, it is recommended to return the router</span>
+<span class="token comment">// instead of binding it to the server directly</span>
+<span class="token keyword">function</span> <span class="token function">createRouter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Router<span class="token operator">&lt;</span>AppContext<span class="token operator">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  router<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&quot;/users/:id&quot;</span><span class="token punctuation">,</span> handleUserById<span class="token punctuation">)</span>
+  router<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">&quot;/users&quot;</span><span class="token punctuation">,</span> handleCreateUser<span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> router
+<span class="token punctuation">}</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">{</span> components<span class="token punctuation">,</span> startComponents <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> globalContext<span class="token operator">:</span> AppContext <span class="token operator">=</span> <span class="token punctuation">{</span> components <span class="token punctuation">}</span>
+
+  <span class="token comment">/// Wire the server</span>
+  components<span class="token punctuation">.</span>server<span class="token punctuation">.</span><span class="token function">setContext</span><span class="token punctuation">(</span>globalContext<span class="token punctuation">)</span>
+
+  <span class="token comment">/// Maybe use some middlewares to log every request?</span>
+  <span class="token comment">//    components.server.use(globalLoggerInterceptor)</span>
+
+  <span class="token comment">/// Wire the server to the global router</span>
+  components<span class="token punctuation">.</span>server<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">createRouter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">middleware</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+  <span class="token comment">/// Start server and other components</span>
+  <span class="token keyword">await</span> <span class="token function">startComponents</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="request-object"><a href="#request-object" class="header-anchor">#</a> Request object</h2> <p>The request follows the <a href="https://fetch.spec.whatwg.org/#requests" target="_blank" rel="noopener noreferrer">WHATWG Fetch Request standard<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>. And it is part of the context received by the handlers:</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">type</span> <span class="token class-name">HttpContext<span class="token operator">&lt;</span>AppContext<span class="token operator">&gt;</span></span> <span class="token operator">=</span> AppContext <span class="token operator">&amp;</span> <span class="token punctuation">{</span>
+  request<span class="token operator">:</span> Request
+  url<span class="token operator">:</span> <span class="token constant">URL</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="responses"><a href="#responses" class="header-anchor">#</a> Responses</h2> <p>Same as Requests, responses derive from the <a href="https://fetch.spec.whatwg.org/#responses" target="_blank" rel="noopener noreferrer">WHATWG Fetch Response standard<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>. It is worth mentioning that in order to avoid many complications, both the <code>Response</code> and <code>ResponseInit</code> objects are accepted as valid responses.</p> <p>There is one main addition: <code>.body</code> field, which was added by us to enable returning the body of the response.</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// WHATWG standard</span>
+<span class="token keyword">interface</span> <span class="token class-name">StandardResponseInit</span> <span class="token punctuation">{</span>
+  headers<span class="token operator">?</span><span class="token operator">:</span> HeadersInit
+  status<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span>
+  statusText<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// our implementation</span>
+<span class="token keyword">type</span> <span class="token class-name">Response</span> <span class="token operator">=</span> StandardResponseInit <span class="token operator">&amp;</span> <span class="token punctuation">{</span>
+  body<span class="token operator">?</span><span class="token operator">:</span> JsonBody <span class="token operator">|</span> stream<span class="token punctuation">.</span>Readable <span class="token operator">|</span> Uint8Array <span class="token operator">|</span> Buffer <span class="token operator">|</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>As you can infer from the code, there are several supported response body types, some of them have default mime-types:</p> <ul><li><code>(no default content type)</code>: <code>Buffer</code>, <code>Uint8Array</code>, <code>ArrayBuffer</code>, <code>Node.Stream</code></li> <li><code>text/plain</code>: <code>string</code></li> <li><code>application/json</code>: anything else</li></ul> <h2 id="handling-formdata"><a href="#handling-formdata" class="header-anchor">#</a> Handling FormData</h2> <p>Handling FormData is enabled by <a href="https://www.npmjs.com/package/busboy" target="_blank" rel="noopener noreferrer">third-party libraries like <code>Busboy</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> Busboy <span class="token keyword">from</span> <span class="token string">&quot;busboy&quot;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">handleFormData</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// in this record, we are going to store every form field as it is read</span>
+  <span class="token comment">// from the request.body stream</span>
+  <span class="token keyword">const</span> fields<span class="token operator">:</span> Record<span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token builtin">any</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token comment">// first, create a Busboy instance to read our stream</span>
+  <span class="token keyword">const</span> formDataParser <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Busboy</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    headers<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;content-type&quot;</span><span class="token operator">:</span> ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>headers<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&quot;content-type&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// promise to detect when we finish</span>
+  <span class="token keyword">const</span> finished <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name"><span class="token builtin">Promise</span></span><span class="token punctuation">(</span><span class="token punctuation">(</span>ok<span class="token punctuation">,</span> err<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    formDataParser<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+    formDataParser<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;finish&quot;</span><span class="token punctuation">,</span> ok<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// every time a field is read, this function will be called</span>
+  formDataParser<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&quot;field&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>fieldname<span class="token punctuation">,</span> val<span class="token punctuation">,</span> fieldnameTruncated<span class="token punctuation">,</span> valTruncated<span class="token punctuation">,</span> encoding<span class="token punctuation">,</span> mimetype<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fields<span class="token punctuation">[</span>fieldname<span class="token punctuation">]</span> <span class="token operator">=</span> val
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// lastly, send the input stream to Busboy to process</span>
+  ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">pipe</span><span class="token punctuation">(</span>formDataParser<span class="token punctuation">)</span>
+
+  <span class="token comment">// await until it finishes processing the input data</span>
+  <span class="token keyword">await</span> finished
+
+  <span class="token comment">// respond</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    status<span class="token operator">:</span> <span class="token number">201</span><span class="token punctuation">,</span>
+    body<span class="token operator">:</span> <span class="token punctuation">{</span>
+      fields<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="cookies"><a href="#cookies" class="header-anchor">#</a> Cookies</h2> <p>To keep things simple and to not &quot;glue&quot; the batteries, cookies are not part of this implementation. Same as FormData handling.</p> <p>To handle cookies you may write your own code or use third party libraries like:</p> <ul><li>https://www.npmjs.com/package/tough-cookie</li> <li>https://www.npmjs.com/package/simple-cookie</li> <li>https://www.npmjs.com/package/cookie</li></ul> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> cookie <span class="token keyword">from</span> <span class="token string">&quot;cookie&quot;</span> <span class="token comment">// https://www.npmjs.com/package/cookie</span>
+
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">handler</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> cookies <span class="token operator">=</span> cookie<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>request<span class="token punctuation">.</span>headers<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">&quot;cookie&quot;</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// do something with cookies</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    status<span class="token operator">:</span> <span class="token number">200</span><span class="token punctuation">,</span>
+    headers<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">&quot;Set-Cookie&quot;</span><span class="token operator">:</span> cookie<span class="token punctuation">.</span><span class="token function">serialize</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> <span class="token string">&quot;value&quot;</span><span class="token punctuation">,</span> opts<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documentation/ports/lifecycle.html" class="prev">
+        Lifecycle
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documentation/assets/js/app.a37e55eb.js" defer></script><script src="/documentation/assets/js/2.91af1bd7.js" defer></script><script src="/documentation/assets/js/15.75a0678f.js" defer></script>
+  </body>
+</html>

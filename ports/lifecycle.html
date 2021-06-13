@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Lifecycle | Well Known Components</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="A different way to create boring applications">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/documentation/assets/css/0.styles.fdb13168.css" as="style"><link rel="preload" href="/documentation/assets/js/app.a37e55eb.js" as="script"><link rel="preload" href="/documentation/assets/js/2.91af1bd7.js" as="script"><link rel="preload" href="/documentation/assets/js/16.a317ebf2.js" as="script"><link rel="prefetch" href="/documentation/assets/js/10.730e9d0f.js"><link rel="prefetch" href="/documentation/assets/js/11.552735b1.js"><link rel="prefetch" href="/documentation/assets/js/12.87a4d3cb.js"><link rel="prefetch" href="/documentation/assets/js/13.b4885c12.js"><link rel="prefetch" href="/documentation/assets/js/14.81cf27f4.js"><link rel="prefetch" href="/documentation/assets/js/15.75a0678f.js"><link rel="prefetch" href="/documentation/assets/js/3.57036479.js"><link rel="prefetch" href="/documentation/assets/js/4.95ec17ab.js"><link rel="prefetch" href="/documentation/assets/js/5.7ec961d8.js"><link rel="prefetch" href="/documentation/assets/js/6.17d5dd20.js"><link rel="prefetch" href="/documentation/assets/js/7.33a5751e.js"><link rel="prefetch" href="/documentation/assets/js/8.aec57476.js"><link rel="prefetch" href="/documentation/assets/js/9.f522ea37.js">
+    <link rel="stylesheet" href="/documentation/assets/css/0.styles.fdb13168.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documentation/" class="home-link router-link-active"><!----> <span class="site-name">Well Known Components</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documentation/docs/" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/documentation/config/" class="nav-link">
+  Config
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documentation/docs/" class="nav-link">
+  Documentation
+</a></div><div class="nav-item"><a href="/documentation/config/" class="nav-link">
+  Config
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/documentation/docs/" class="sidebar-heading clickable"><span>Documentation</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/documentation/docs/" class="sidebar-link">Introduction</a></li><li><a href="/documentation/docs/philosophy.html" class="sidebar-link">Philosophy</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/documentation/ports/" class="sidebar-heading clickable router-link-active open"><span>Libraries (Ports)</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/documentation/ports/" aria-current="page" class="sidebar-link">@well-known-components</a></li><li><a href="/documentation/ports/lifecycle.html" aria-current="page" class="active sidebar-link">Lifecycle</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documentation/ports/lifecycle.html#lifecycle-design" class="sidebar-link">Lifecycle design</a></li><li class="sidebar-sub-header"><a href="/documentation/ports/lifecycle.html#ordered-startup-sequence" class="sidebar-link">Ordered startup sequence</a></li></ul></li><li><a href="/documentation/ports/http-server.html" class="sidebar-link">http-server</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="lifecycle"><a href="#lifecycle" class="header-anchor">#</a> Lifecycle</h1> <p>The <code>@well-known-components/interfaces</code> library not only define well-known-components, it exposes a <code>Lifecycle</code> namespace to help control any application built with the components.</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> Lifecycle <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;@well-known-components/interfaces&quot;</span>
+
+<span class="token comment">// Record of components</span>
+<span class="token keyword">type</span> <span class="token class-name">Components</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token builtin">console</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token function">log</span><span class="token punctuation">(</span>text<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Context passed to all handlers, we always include the components here</span>
+<span class="token keyword">type</span> <span class="token class-name">AppContext</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  components<span class="token operator">:</span> Components
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Lifecycle.run manages the lifecycle of the application and components</span>
+<span class="token comment">// it is particularly useful for servers with many components with state</span>
+<span class="token comment">// like database connectors, servers, or batch jobs.</span>
+<span class="token comment">// It also handles POSIX signals like SIGTERM to gracefully stop the</span>
+<span class="token comment">// components</span>
+Lifecycle<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">run</span><span class="token generic class-name"><span class="token operator">&lt;</span>Components<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">{</span> initComponents<span class="token punctuation">,</span> main <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// main entry point of the application, it's role is to wire components</span>
+<span class="token comment">// together (controllers, handlers) and ultimately start the components</span>
+<span class="token comment">// by calling startComponents</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">{</span> components<span class="token punctuation">,</span> startComponents <span class="token punctuation">}</span><span class="token operator">:</span> Lifecycle<span class="token punctuation">.</span>EntryPointParameters<span class="token operator">&lt;</span>Components<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> globalContext<span class="token operator">:</span> AppContext <span class="token operator">=</span> <span class="token punctuation">{</span> components <span class="token punctuation">}</span>
+
+  <span class="token comment">// wire the components, this is usually more meaningful than a console.log</span>
+  <span class="token comment">// i.e. routes are wired to the server here</span>
+  components<span class="token punctuation">.</span><span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;initializing&quot;</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// start components</span>
+  <span class="token keyword">await</span> <span class="token function">startComponents</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// initComponents role is to create BUT NOT START the components,</span>
+<span class="token comment">// this function is only called once by the Lifecycle manager</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">initComponents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>Components<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token builtin">console</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">createConsoleComponent</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token comment">/*components*/</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="lifecycle-design"><a href="#lifecycle-design" class="header-anchor">#</a> Lifecycle design</h2> <p>The main consideration for this approach was to <em>never</em> create any top-level variable in our applications, to make testing easier. That, combined with highly complex servers, led us to centralize and write a piece of software (the Lifecycle manager) to deal with components and delicated processes like:</p> <ol><li>Control all components to gracefully shut down the application</li> <li>Get useful information to respond to health checks</li> <li>Avoid divergence in implementations that lead to maintainability issues</li></ol> <h2 id="ordered-startup-sequence"><a href="#ordered-startup-sequence" class="header-anchor">#</a> Ordered startup sequence</h2> <ol><li>First, <code>initComponents</code> is called.<br>
+In that async function we must create <em>but NOT start</em> our components. To explain it in practical terms of an http-server component, creating the component means to expose the interface to wire the routes, and starting it is actually listening to the port and be ready to accept requests.</li> <li>Second, <code>main</code> function is called.<br>
+The role of the <code>main</code> function is to wire components together before starting them. The wiring is the process in which we configure our application to react to events, http requests, kafka messages.</li> <li>Third, inside the <code>main</code> function, the parameter <code>startComponents</code> is called.<br>
+This is the moment in which we connect the databases, the MQ adapters, start the http-server listener.</li> <li>Forth, shut down.<br>
+By default, Lifecycle does not prevent any shutdown. That means our program will run handled by Node.js event loop. The unique case managed by Lifecycle is <code>SIGTERM</code>, a signal sent by many orchestrators to gracefully stop our process without losing data.
+In this case, the Lifecycle manager will call and await the <code>stop</code> method of every component.</li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documentation/ports/" class="prev router-link-active">
+        @well-known-components
+      </a></span> <span class="next"><a href="/documentation/ports/http-server.html">
+        http-server
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/documentation/assets/js/app.a37e55eb.js" defer></script><script src="/documentation/assets/js/2.91af1bd7.js" defer></script><script src="/documentation/assets/js/16.a317ebf2.js" defer></script>
+  </body>
+</html>
