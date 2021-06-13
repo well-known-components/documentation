@@ -42,15 +42,20 @@ module.exports = {
         link: "/config/",
       },
     ],
-    sidebar: {
-      "/docs/": [
-        {
-          title: "Documentation",
-          collapsable: false,
-          children: ["", "philosophy"],
-        },
-      ],
-    },
+    sidebar: [
+      {
+        title: "Documentation",
+        path: "/docs/",
+        collapsable: false,
+        children: ["/docs/", "/docs/philosophy"],
+      },
+      {
+        title: "Libraries (Ports)",
+        path: "/ports/",
+        collapsable: false,
+        children: ["/ports/", "/ports/lifecycle", "/ports/http-server"],
+      },
+    ],
   },
 
   /**
